@@ -16,6 +16,7 @@ body {
 }
 
 main {
+  margin-top: 100px;
   display: inherit;
   width: 740px;
   height: 510px;
@@ -29,6 +30,7 @@ footer {
   text-align: center;
   bottom: 0;
 }
+
 footer a {
   color: hsl(228, 45%, 44%);
 }
@@ -194,7 +196,7 @@ p {
   main {
     min-height: 100vh;
     min-width: 100vw;
-    /* display: block; */
+    margin-top: 0;
     display: flex;
     flex-direction: column;
   }
