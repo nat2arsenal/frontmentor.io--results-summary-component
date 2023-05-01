@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  p {
+    font-size: 17px;
+  }
+  h1 {
+    color: #ffffff;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 90%;
+    max-width: 740px;
+    height: 510px;
+    max-height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+    .result-container {
+      max-height: 510px;
+      background-image: linear-gradient(
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+      );
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 45px 65px;
+      text-align: center;
+      h3,
+      p {
+        color: #c8beff;
+      }
+      .result-bottom-title {
+        margin-bottom: 15px;
+      }
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(
+          hsla(256, 72%, 46%, 1),
+          hsla(241, 72%, 46%, 0)
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        p {
+          color: #877aff;
+        }
+        h1 {
+          font-size: 70px;
+        }
+      }
+    }
+    .summary-container {
+      border-radius: 0 30px 30px 0;
+      padding: 45px 40px;
+      h3 {
+        margin-bottom: 30px;
+        color: #404154;
+      }
+      ul {
+        list-style: none;
+        li {
+          margin-bottom: 15px;
+          height: 55px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 20px;
+          div {
+            display: flex;
+            align-items: center;
+            img {
+              margin-right: 20px;
+            }
+          }
+          p {
+            color: #9799a9;
+            span {
+              color: #333a4c;
+            }
+          }
+          &:nth-child(1) {
+            background-color: #fff6f5;
+            div > p {
+              color: #cb6d6e;
+            }
+          }
+          &:nth-child(2) {
+            background-color: #fffbf2;
+            div > p {
+              color: #e2bb67;
+            }
+          }
+          &:nth-child(3) {
+            background-color: #f2fafa;
+            div > p {
+              color: #2eaa8e;
+            }
+          }
+          &:nth-child(4) {
+            background-color: #f3f3fd;
+            div > p {
+              color: #303992;
+            }
+          }
+        }
+      }
+      .button {
+        text-align: center;
+        background-color: #303b59;
+        color: #ffffff;
+        border-radius: 45px;
+        margin: 45px 0;
+        padding: 20px;
+        &:hover {
+          background-color: #4c37f4;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+@media (max-width: 690px) {
+  main {
+    .container {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+      .result-container {
+        height: 43.88%;
+        border-radius: 0 0 30px 30px;
+        padding: 30px;
+        h3 {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        h1 {
+          font-size: 25px;
+        }
+        p {
+          font-size: 17px;
+        }
+        .circle {
+          width: 135px;
+          height: 135px;
+          margin-top: 0;
+          margin-bottom: 20px;
+          h1 {
+            font-size: 60px;
+          }
+        }
+      }
+      .summary-container {
+        height: 56.12%;
+        padding: 25px 30px;
+        h3 {
+          font-size: 15px;
+          margin-bottom: 30px;
+        }
+        .button {
+          margin: 30px auto;
+        }
+      }
+    }
+  }
+  footer {
+    display: none;
+  }
+}
